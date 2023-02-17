@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'SPSLRussianSouvenir';
+	src: url('../fonts/spslrussiansouvenir.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/spslrussiansouvenir.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/spslrussiansouvenir.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/spslrussiansouvenir.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/spslrussiansouvenir.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/spslrussiansouvenir.svg#spslrussiansouvenir') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+	font-family: 'ofont.ru_A La Russ';
+	src: url(../fonts/ofont.ru_A\ La\ Russ.ttf);
+}
+@font-face {
+	font-family: 'Forum-Regular';
+	src: url(../fonts/Forum-Regular.ttf);
+}
+
+
+@font-face {
+	font-family: 'ionicons';
+	src: url(../css/font/ionicons.ttf);
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>оркестр русских народных инструментов "ТУЛА"</title>
+		<meta name="description" content="An experimental page transition concept for magazines and blogs where an item opens for a full page view." />
+		<meta name="keywords" content="page transition, preview, layout, animation, gsap, magazine, magnetic hover" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/ytb6dpl.css">
+
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+
+<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	
+
+
+	</head>
+	<body class="loading">
+
+
+		<main id="nav"> 
+        <header>
+		<nav class="cd-main-nav-wrapper">
+			<ul class="cd-main-nav">
+				<li><a href="orchestra.html">Оркестр</a></li>
+				<li><a href="anonsy.html">Анонсы</a></li>
+				<li><a href="fest.html">Фестивали</a></li>
+       				<li><a href="gallery.html">Галерея</a></li>
+				<li><a href="contakts.html">Контакты</a></li>
+				
+			</ul> <!-- .cd-main-nav -->
+		</nav> <!-- .cd-main-nav-wrapper -->
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+	</header>
+			<section class="items" id="one">
+				<article class="item" id="1">
+					<div class="item__imgwrap">
+						<div class="item__img" style="background-image:url(img/1.jpg)"></div>
+					</div>
+					<button class="item__enter unbutton">
+						<svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800" viewBox="0 0 800 800">
+						</svg>
+					</button>
+					<h2 class="heading heading--item">
+						<span data-splitting>"Серебряные струны"</span>
+						<span data-splitting> <i></i> </span>
+					</h2>
+					<div class="item__meta">
+						<span class="item__meta-row"><span></span></span>
+						<span class="item__meta-row"><span> &mdash;</span></span>
+
+					</div>
+
+	                                    <div class="item__excerpt">
+						<p><h></p>
+
+						<a class="item__excerpt-link" href="#content-1"><span>узнать больше</span></a>
+					</div>
+	
+				  </article>
+
+			        <article class="item item--invert" id="2">
+					<div class="item__imgwrap">
+						<div class="item__img" style="background-image:url(img/2.jpg)"></div>
+					</div>
+				         <button class="item__enter unbutton">
+						<svg class="item__enter-circle" vector-effect="non-scaling-stroke" width="800" height="800" viewBox="0 0 800 800">
+							<circle vector-effect="non-scaling-stroke" cx="400" cy="400" r="150"/>
+						</svg>
+					</button>
+					<h2 class="heading heading--item">
+						<span data-splitting>"Ступеньки мастерства"</span>
+                                            		<span data-splitting><i></i></span>
+				         </h2>
+					<div class="item__meta">
+						<span class="item__meta-row"><span></span></span>
+						<span class="item__meta-row"><span> &mdash;</span></span>
+					</div>
+                                              <div class="item__excerpt">
+                        	                          <div class="item__excerpt">
+                                             
+                                                      			<a class="item__excerpt-link" href="#content-2"><span>смотреть афишу</span></a>
+					</div>
+				
+				</article>
+				
+			</section>
+			<section class="content">
+				
+				<article class="content__article content__article--invert" id="content-1">
+					
+				</article>
+				<article class="content__article" id="content-2">
+					
+				</article>
+				
+				<button class="content__back unbutton" >
+					<svg width="108" height="28" viewBox="0 0 108 23" style="background-color: darkorange;padding:0.31rem;border-radius:23px; ">
+						<path stroke="#000" fill="none" d="M107.5 11.5H1.5M1.5 11.5c8.975-.536 15.087-1.364 18.336-2.484C23.086 7.896 26.64 5.39 30.5 1.5M1.5 11.5c8.975.536 15.087 1.364 18.336 2.484 3.25 1.12 6.804 3.626 10.664 7.516"/>
+					</svg>
+				</button>
+			</section>
+
+			
+		</main>
+		<svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
+			<circle class="cursor__inner" cx="40" cy="40" r="20"/>
+		</svg>
+
+
+		
+
+  <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=v3.11.4'></script>
+<script src='https://assets.codepen.io/16327/ScrollTrigger.min.js'></script>
+<script src='https://assets.codepen.io/16327/ScrollSmoother.min.js'></script>
+<script src='https://assets.codepen.io/16327/SplitText3.min.js'></script>
+<!--
+ScrollSmoother.min.js is a Club GreenSock perk which is not available on a CDN. Download it from your GreenSock account and include it locally like this:
+
+<script src="/[YOUR_DIRECTORY]/ScrollSmoother.min.js"></script>
+
+Sign up at https://greensock.com/club or try them for free on CodePen or CodeSandbox
+-->
+<script  src="./script.js"></script>
+<script src='https://unpkg.com/splitting@1.0.5/dist/splitting.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script  src="script.js"></script>
+<script src="js/index.6d569464.js"></script>
+
+	</body>
+</html>
