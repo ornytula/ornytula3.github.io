@@ -1,5 +1,26 @@
+@font-face {
+	font-family: 'SPSLRussianSouvenir';
+	src: url('../fonts/spslrussiansouvenir.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/spslrussiansouvenir.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/spslrussiansouvenir.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/spslrussiansouvenir.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/spslrussiansouvenir.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/spslrussiansouvenir.svg#spslrussiansouvenir') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+	font-family: 'ofont.ru_A La Russ';
+	src: url(../fonts/ofont.ru_A\ La\ Russ.ttf);
+}
+@font-face {
+	font-family: 'Forum-Regular';
+	src: url(../fonts/Forum-Regular.ttf);
+}
 
 
+@font-face {
+	font-family: 'ionicons';
+	src: url(../css/font/ionicons.ttf);
+}
 
 
 @import url("colors/color.css");
@@ -340,7 +361,7 @@ Main components
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color:  rgb(240, 108, 0);
+  background-color:  #fff;
   right: 0;
   -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
   -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
@@ -353,7 +374,7 @@ Main components
   top: 5px;
 }
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
 }
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before, .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
   background-color:  #fff;
@@ -411,6 +432,7 @@ Main components
   top: 0;
   height: 100%;
   width: 100%;
+  background: rgba(0, 0, 0, 0.96);
   z-index: 2000;
   text-align: center;
   -webkit-backface-visibility: hidden;
@@ -620,13 +642,12 @@ body::before {
   width:100%;
   position:relative;
   margin:0 auto;
-	overflow: hidden;
 }
 .cd-section > div {
   height: 100vh;
   width:100%;
   position:relative;
-	overflow: hidden;
+	
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -758,6 +779,7 @@ body::before {
     transition: all 300ms linear; 
 }
 .cd-vertical-nav a:hover {
+  background-color:#000;
 }
 .cd-vertical-nav a.cd-prev {
   -webkit-transform: rotate(180deg);
@@ -842,6 +864,7 @@ body::before {
 	letter-spacing:3px;
 	color: #fff;
 	padding:12px 25px;
+	background:rgba(0,0,0,.9);
 }
 
 .social-top{ 
@@ -893,6 +916,61 @@ body::before {
 
 
 
+.button {
+	min-width: 150px;
+	max-width: 200px;
+	display: block;
+	margin: 0 auto;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.button:focus {
+	outline: none;
+}
+.button > span {
+	vertical-align: middle;
+}
+.button--moema {
+	padding: 16px 30px;
+	border-radius: 50px;
+	text-align:center;
+	background:#fff;
+	letter-spacing:2px;
+	color: #000;
+	-webkit-transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s;
+}
+.button--moema::before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	bottom: -20px;
+	right: -20px;
+	background: inherit;
+	border-radius: 50px;
+	z-index: -1;
+	opacity: 0.4;
+	-webkit-transform: scale3d(0.8, 0.5, 1);
+	transform: scale3d(0.8, 0.5, 1);
+}
+.button--moema:hover {
+	-webkit-transition: background-color 0.3s 0s, color 0.3s 0s;
+	transition: background-color 0.3s 0s, color 0.3s 0s;
+	color:#fff;
+	-webkit-animation: anim-moema-1 0.6s forwards;
+	animation: anim-moema-1 0.6s forwards;
+}
+.button--moema:hover::before {
+	-webkit-animation: anim-moema-2 0.6s 0.5s forwards;
+	animation: anim-moema-2 0.6s 0.5s forwards;
+}
 @-webkit-keyframes anim-moema-1 {
 	60% {
 		-webkit-transform: scale3d(0.8, 0.8, 1);
@@ -938,6 +1016,47 @@ body::before {
 
 
 
+/* #Tooltip
+================================================== */
+
+	.tipper { height: 1px; left: -99999px; position: absolute; pointer-events: none; top: -99999px; width: 1px;z-index:100000; }
+	.tipper .tipper-content { background: rgba(20, 20, 20, 0.85);box-shadow: 0 0 25px rgba(0,0,0,0.5);text-transform:uppercase; border-radius: 3px; color: #fff; display: block; float: left; font-family: 'Inconsolata'; font-size: 10px; margin: 0; padding: 6px 20px; position: relative; white-space: nowrap; }
+	.tipper .tipper-caret { background: url('../images/tipper-icon.png') no-repeat; display: block; height: 11px;  position: absolute; width: 100%; }
+
+	.tipper.right .tipper-content { box-shadow: 1px 0 3px rgba(0, 0, 0, 0.25); }
+	.tipper.right .tipper-caret { background-position: left center; left: -5px; top: 0; }
+
+	.tipper.left .tipper-content { box-shadow: -1px 0 3px rgba(0, 0, 0, 0.25); }
+	.tipper.left .tipper-caret { background-position: right center; right: -5px; top: 0; }
+
+	.tipper.top .tipper-caret,
+	.tipper.bottom .tipper-caret { display: block; float: none; height: 5px;  width: 12px;margin-left:-6px; }
+
+	.tipper.top .tipper-content { box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.25); }
+	.tipper.top .tipper-caret { background-position: center bottom; bottom: -5px; left: 0; text-align:center;}
+
+	.tipper.bottom .tipper-content { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); }
+	.tipper.bottom .tipper-caret { background-position: center top; top: -5px; left: 0; }
+
+	
+video#video-background { 
+	position: absolute;
+	top:50%;
+	left:50%;
+	min-width: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+	overflow: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}	
+	
+/* #General classes
+================================================== */
 
 .section{
 	position:relative;
@@ -1611,19 +1730,20 @@ body::before {
   clear: both;
 }
 .blog-box-1{
+	background-color: #021a2a;
+         border:2px solid darkorange;
+       
+
 	position:relative;
 	float:left;
-	width:calc(25% - 50px);
+	width:calc(18% - 50px);
 	display:block;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	margin-top:25px;
-	margin-right:24px;
-	margin-bottom:25px;
-	margin-left:25px;
+	margin:0.8rem;
 	overflow:hidden;
-	padding:30px;
+	padding:0px;
 	-webkit-transform: translate3d(1px,0,0);
 	transform: translate3d(1px,0,0);
     -webkit-transition: all 300ms linear;
@@ -1635,14 +1755,14 @@ body::before {
 .blog-box-1 .date{
 	position:relative;
 }
-.blog-box-1 .date p{
-	font-family: 'Inconsolata';
+.blog-box-1 h4{
+	font-family: 'ofont.ru_A La Russ';
 	font-weight:400;
-	font-size: 14px;
+	font-size: 18px;
 	line-height:23px;
 	letter-spacing:2px;
 	text-align:left;
-	color:#fff;
+	color:#fff;padding: 1rem;
 }
 .blog-box-1 .date p span{
 	font-size: 42px;
@@ -1653,13 +1773,15 @@ body::before {
 	float:right;
 	display: block;
 }
-.blog-box-1 h6{
+.blog-box-1 h6{	font-family: 'Forum-Regular';
+	font-size: 15px;
+
 	position:relative;
 	text-align:left;
 	line-height:30px;
-	margin-top:30px;
+	padding: 1rem;
 	padding-bottom:10px;
-	color:#f8f8f8;
+	color:darkorange;
     -webkit-transition: all 300ms linear;
     -moz-transition: all 300ms linear;
     -o-transition: all 300ms linear;
@@ -1692,7 +1814,7 @@ body::before {
 	width:100%;
 	height:auto;
 	display:block;
-	margin-top:30px;
+	margin-top:5px;
     -webkit-transition: all 300ms linear;
     -moz-transition: all 300ms linear;
     -o-transition: all 300ms linear;

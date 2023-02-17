@@ -24,6 +24,5 @@ animation:animate 2s  ease-in ;
 100%{opacity: 100%;}
   
 }
-#contain{z-index: 9;display:inline ;position:fixed ;left: 20%;
-top:1%}
-.conaint{z-index:999999999;}
+#contain{z-index: 9;display:inline ;position:absolute ;left: 55%;
+top:2%}
