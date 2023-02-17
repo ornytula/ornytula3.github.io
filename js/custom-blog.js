@@ -41,10 +41,10 @@
 					columnNumb = 1;
 				
 				
-				if (winWidth > 1900) {
-					columnNumb = 1;
-				} else if (winWidth > 1500) {
-					columnNumb = 2;
+				if (winWidth > 1500) {
+					columnNumb = 4;
+				} else if (winWidth > 1200) {
+					columnNumb = 3;
 				} else if (winWidth > 900) {
 					columnNumb = 2;
 				} else if (winWidth > 600) {

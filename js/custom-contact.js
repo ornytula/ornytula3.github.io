@@ -21,7 +21,7 @@
 		var marker_url = ( is_internetExplorer11 ) ? 'images/cd-icon-location.png' : 'images/cd-icon-location.svg';
 			
 		//define the basic color of your map, plus a value for saturation and brightness
-		var	main_color = '#f25e08',
+		var	main_color = '#cfa144',
 			saturation_value= -50,
 			brightness_value= 7;
 

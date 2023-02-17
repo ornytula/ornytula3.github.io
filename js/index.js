@@ -1,6 +1,6 @@
-import { preloadImages, preloadFonts } from './utils';
+import { preloadImages, preloadFonts } from '../utils';
 import { Cursor } from './cursor';
-import { Item }  from './item';
+import { Item }  from '../item';
 
 // Preload images and fonts
 Promise.all([preloadImages('.item__img, .content__img'), preloadFonts('ytb6dpl')]).then(() => {
